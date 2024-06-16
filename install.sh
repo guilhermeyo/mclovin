@@ -3,7 +3,7 @@ set -e
 
 # Needed for all installers
 sudo pacman -Syu --noconfirm
-sudo pacman -Syu --noconfirm base-devel gnupg sudo wget curl unzip rsync figlet
+sudo pacman -Syu --noconfirm base-devel gnupg sudo wget curl unzip rsync figlet gum
 
 # Create directory for keyrings if it doesn't exist
 sudo install -dm 755 /etc/pacman.d/gnupg
@@ -12,7 +12,6 @@ sudo install -dm 755 /etc/pacman.d/gnupg
 source $HOME/.local/share/mclovin/install/libraries.sh
 source $HOME/.local/share/mclovin/install/git.sh
 source $HOME/.local/share/mclovin/install/yay.sh
-source $HOME/.local/share/mclovin/install/gum.sh
 source $HOME/.local/share/mclovin/install/mise.sh
 source $HOME/.local/share/mclovin/install/apps-terminal.sh
 source $HOME/.local/share/mclovin/install/app-allacrity.sh
