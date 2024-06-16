@@ -9,22 +9,22 @@ sudo pacman -Syu --noconfirm base-devel gpg sudo wget curl unzip rsync figlet
 sudo install -dm 755 /etc/pacman.d/gnupg
 
 # Run installers
-source $HOME/.local/share/mclovin/apps/libraries.sh
-source $HOME/.local/share/mclovin/apps/git.sh
-source $HOME/.local/share/mclovin/apps/yay.sh
-source $HOME/.local/share/mclovin/apps/gum.sh
-source $HOME/.local/share/mclovin/apps/mise.sh
-source $HOME/.local/share/mclovin/apps/apps-terminal.sh
-source $HOME/.local/share/mclovin/apps/app-allacrity.sh
-source $HOME/.local/share/mclovin/apps/app-lazydocker.sh
-source $HOME/.local/share/mclovin/apps/app-lazygit.sh
-source $HOME/.local/share/mclovin/apps/app-neovim.sh
-source $HOME/.local/share/mclovin/apps/app-vlc.sh
-source $HOME/.local/share/mclovin/apps/docker.sh
-source $HOME/.local/share/mclovin/apps/fonts.sh
-source $HOME/.local/share/mclovin/apps/starship.sh
-source $HOME/.local/share/mclovin/apps/a-shell.sh
-source $HOME/.local/share/mclovin/apps/fastfetch.sh
+source $HOME/.local/share/mclovin/install/libraries.sh
+source $HOME/.local/share/mclovin/install/git.sh
+source $HOME/.local/share/mclovin/install/yay.sh
+source $HOME/.local/share/mclovin/install/gum.sh
+source $HOME/.local/share/mclovin/install/mise.sh
+source $HOME/.local/share/mclovin/install/apps-terminal.sh
+source $HOME/.local/share/mclovin/install/app-allacrity.sh
+source $HOME/.local/share/mclovin/install/app-lazydocker.sh
+source $HOME/.local/share/mclovin/install/app-lazygit.sh
+source $HOME/.local/share/mclovin/install/app-neovim.sh
+source $HOME/.local/share/mclovin/install/app-vlc.sh
+source $HOME/.local/share/mclovin/install/docker.sh
+source $HOME/.local/share/mclovin/install/fonts.sh
+source $HOME/.local/share/mclovin/install/starship.sh
+source $HOME/.local/share/mclovin/install/a-shell.sh
+source $HOME/.local/share/mclovin/install/fastfetch.sh
 
 # Install languages
 mise use --global rust@latest
