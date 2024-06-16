@@ -3,7 +3,7 @@ set -e
 
 # Needed for all installers
 sudo pacman -Syu --noconfirm
-sudo pacman -Syu --noconfirm base-devel gpg sudo wget curl unzip rsync figlet
+sudo pacman -Syu --noconfirm base-devel gnupg sudo wget curl unzip rsync figlet
 
 # Create directory for keyrings if it doesn't exist
 sudo install -dm 755 /etc/pacman.d/gnupg
