@@ -1,0 +1,44 @@
+import = [
+  "~/.config/alacritty/tokyo-night-storm.toml"
+]
+
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[cursor]
+style = "Beam"
+vi_mode_style = "Block"
+
+[window]
+startup_mode = "Maximized"
+dynamic_title = true
+title = "Alacritty"
+decorations = "Full"
+padding.x = 10
+padding.y = 10
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+size = 16.0
+
+[font.bold]
+family = "MesloLGS Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "MesloLGS Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "MesloLGS Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "MesloLGS Nerd Font Mono"
+style = "Regular"
+

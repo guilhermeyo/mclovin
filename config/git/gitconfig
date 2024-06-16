@@ -1,0 +1,53 @@
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = true
+[color "diff"]
+  commit = yellow
+  frag = cyan
+  meta = yellow
+  new = green
+  old = red
+  plain = black
+  whitespace = red reverse
+[commit]
+	gpgsign = false
+[alias]
+  b = branch
+  ca = commit --amend
+  ci = commit
+  co = checkout
+  dw = diff --word-diff
+  fl = log -p
+  lg = log --oneline --decorate
+  sb = status -sb
+  sh = !git-sh
+  st = status
+  who = shortlog -s --
+[help]
+  autocorrect = 1
+[branch]
+  autosetuprebase = always
+[push]
+  default = current
+[core]
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+  editor = nvim
+[merge]
+  ff = only
+[fetch]
+  prune = true
+[color "diff-highlight"]
+  newHighlight = green reverse
+  newNormal = green
+  oldHighlight = red reverse
+  oldNormal = red
+[init]
+  defaultBranch = main
+[gpg]
+  format = ssh
+[user]
+  name = Guilherme Yamakawa de Oliveira
+  email = github@guilherme44.com

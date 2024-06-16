@@ -1,0 +1,17 @@
+.DS_Store
+.*.sw?
+/.pow*
+/.rvmrc
+/.tool_versions
+/.tags*
+Thumbs.db
+.vagrant
+.bash/user.sh
+.gemtags
+.tags
+.tags_sorted_by_file
+/node_modules
+/.env
+/.env.*
+/coverage
+/.ruby-lsp
