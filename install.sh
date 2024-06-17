@@ -12,10 +12,12 @@ sudo install -dm 755 /etc/pacman.d/gnupg
 source $HOME/.local/share/mclovin/install/libraries.sh
 source $HOME/.local/share/mclovin/install/git.sh
 source $HOME/.local/share/mclovin/install/yay.sh
+source $HOME/.local/share/mclovin/install/mise.sh
+source $HOME/.local/share/mclovin/install/starship.sh
 source $HOME/.local/share/mclovin/install/zoxide.sh
+source $HOME/.local/share/mclovin/install/atuin.sh
 source $HOME/.local/share/mclovin/install/apps-terminal.sh
 source $HOME/.local/share/mclovin/install/a-shell.sh
-source $HOME/.local/share/mclovin/install/mise.sh
 source $HOME/.local/share/mclovin/install/app-allacrity.sh
 source $HOME/.local/share/mclovin/install/app-lazydocker.sh
 source $HOME/.local/share/mclovin/install/app-lazygit.sh
@@ -23,7 +25,6 @@ source $HOME/.local/share/mclovin/install/app-neovim.sh
 source $HOME/.local/share/mclovin/install/app-vlc.sh
 source $HOME/.local/share/mclovin/install/docker.sh
 source $HOME/.local/share/mclovin/install/fonts.sh
-source $HOME/.local/share/mclovin/install/starship.sh
 source $HOME/.local/share/mclovin/install/fastfetch.sh
 
 # Install languages
