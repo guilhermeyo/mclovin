@@ -1,4 +1,4 @@
-yay -S --noconfirm atuin
+bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
 
 echo -e "\n# Atuin Config\neval \"\$(atuin init bash)\"" >>~/.bashrc
 
