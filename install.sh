@@ -19,11 +19,9 @@ source $HOME/.local/share/mclovin/install/fonts.sh
 source $HOME/.local/share/mclovin/install/a-shell.s
 source $HOME/.local/share/mclovin/install/general-packages.sh
 source $HOME/.local/share/mclovin/install/hyprland-packages.sh
-source $HOME/.local/share/mclovin/install/app-alacritty.sh
 source $HOME/.local/share/mclovin/install/app-neovim.sh
-source $HOME/.local/share/mclovin/install/app-vlc.sh
 source $HOME/.local/share/mclovin/install/docker.sh
-source $HOME/.local/share/mclovin/install/fastfetch.sh
+source $HOME/.local/share/mclovin/install/set-configs.sh
 
 # Install languages
 mise use --global rust@latest
