@@ -1,1 +1,2 @@
-sudo apt install -y fzf ripgrep bat eza zoxide bpytop fd-find atuin
+sudo pacman -S --noconfirm fzf ripgrep bat zoxide bpytop fd
+yay -S --noconfirm eza atuin

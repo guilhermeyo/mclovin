@@ -2,8 +2,7 @@
 
 curl https://mise.run | sh
 
-# Install mise
-sudo pacman -Sy --noconfirm mise
+echo -e "\n# Mise Config\neval \"\$($HOME/.local/bin/mise activate bash)\"" >>~/.bashrc
 
 # Verify the installation
 if command -v mise &>/dev/null; then

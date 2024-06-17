@@ -1,4 +1,4 @@
-if ! grep -q "source $HOME/.local/share/mclovin/config/bashrc" ~/.zshrc; then
+if ! grep -q "source $HOME/.local/share/mclovin/config/bashrc" ~/.bashrc; then
   echo "source $HOME/.local/share/mclovin/config/bashrc" >>~/.bashrc
   echo "Profile has been added to ~/.bashrc"
 else

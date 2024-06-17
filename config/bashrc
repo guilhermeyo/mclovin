@@ -1,54 +1,5 @@
+source ~/.local/share/mclovin/configs/bash/rc
+
+# Editor used by CLI
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
-
-function set_title() {
-  local CMD=$(history 1 | sed 's/^[ ]*[0-9]*[ ]*//')
-  local PATH=$(pwd)
-
-  if [[ "$PATH" == "$HOME"* ]]; then
-    PATH="~${PATH#$HOME}"
-  fi
-
-  echo -ne "\033]0;${CMD} | ${PATH}\007"
-}
-
-PROMPT_COMMAND='set_title'
-trap 'set_title' DEBUG
-
-# Mise
-eval "$(mise activate bash)"
-
-# Starship config
-eval "$(starship init bash)"
-
-# Atuin config
-eval "$(atuin init bash)"
-
-# Zoxide config
-eval "$(zoxide init bash)"
-alias cd="z"
-
-# fzf
-source <(fzf --bash)
-alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
-
-# Eza config
-export EZA_COLORS="di=37:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43:oc=37:ur=37:uw=37:ux=37:ue=37:gr=37:gw=37:gx=37:tr=37:tw=37:tx=37:su=37:sf=37:xa=37:sn=37:uu=37:uR=37:un=37:bu=48;5;999:sc=48;5;999:cm=48;5;999:tm=48;5;999:co=48;5;999:do=48;5;999:da=37"
-alias ls="eza --colour=always --icons --git --git-repos --header --group-directories-first"
-alias ll="ls -l -o"
-
-# Scratches
-alias scratch="nvim ~/Projects/scratches"
-
-# Enable YJIT
-export RUBY_CONFIGURE_OPTS=--enable-yjit
-
-# Aliases
-alias c='clear'
-alias nf='fastfetch'
-alias pf='fastfetch'
-alias ff='fastfetch'
-alias hex="openssl rand -hex"
-alias path='echo $PATH | tr : "\n" | uniq'
-alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
-alias grep="grep --color=auto"
