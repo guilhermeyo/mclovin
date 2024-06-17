@@ -17,6 +17,7 @@ source $HOME/.local/share/mclovin/install/starship.sh
 source $HOME/.local/share/mclovin/install/zoxide.sh
 source $HOME/.local/share/mclovin/install/atuin.sh
 source $HOME/.local/share/mclovin/install/apps-terminal.sh
+source $HOME/.local/share/mclovin/install/bash-preexec.sh
 source $HOME/.local/share/mclovin/install/a-shell.sh
 source $HOME/.local/share/mclovin/install/app-allacrity.sh
 source $HOME/.local/share/mclovin/install/app-lazydocker.sh
