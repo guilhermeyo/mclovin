@@ -12,6 +12,7 @@ sudo install -dm 755 /etc/pacman.d/gnupg
 source $HOME/.local/share/mclovin/install/libraries.sh
 source $HOME/.local/share/mclovin/install/git.sh
 source $HOME/.local/share/mclovin/install/yay.sh
+source $HOME/.local/share/mclovin/install/zoxide.sh
 source $HOME/.local/share/mclovin/install/apps-terminal.sh
 source $HOME/.local/share/mclovin/install/a-shell.sh
 source $HOME/.local/share/mclovin/install/mise.sh
