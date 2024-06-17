@@ -4,7 +4,8 @@ echo -e "\n# Zoxide Config\neval \"\$(zoxide init bash)\"" >>~/.bashrc
 
 # Verify the installation
 if command -v zoxide &>/dev/null; then
+  source ~/.bashrc
   echo "zoxide was installed successfully."
 else
-  echo "Failed to install mise."
+  echo "Failed to install atuin."
 fi
