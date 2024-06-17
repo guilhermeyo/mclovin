@@ -1,8 +1,6 @@
-if ! grep -q "source $HOME/.local/share/mclovin/config/bashrc" ~/.bashrc; then
-  echo "source $HOME/.local/share/mclovin/config/bashrc" >>~/.bashrc
-  echo "Profile has been added to ~/.bashrc"
-else
-  echo "Profile is already sourced in ~/.bashrc"
-fi
-
+[ -f "~/.bashrc" ] && mv ~/.bashrc ~/.bashrc.bak
+cp ~/.local/share/mclovin/configs/bashrc ~/.bashrc
 source $HOME/.bashrc
+
+[ -f "~/.inputrc" ] && mv ~/.inputrc ~/.inputrc.bak
+cp ~/.local/share/omakub/configs/inputrc ~/.inputrc

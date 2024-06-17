@@ -1,4 +1,4 @@
-source ~/.local/share/mclovin/configs/bash/rc
+source ~/.local/share/mclovin/config/bash/rc
 
 # Editor used by CLI
 export EDITOR="nvim"
