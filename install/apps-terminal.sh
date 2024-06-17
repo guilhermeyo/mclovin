@@ -1,2 +1,2 @@
-sudo pacman -S --noconfirm fzf ripgrep bat bpytop fd
-yay -S --noconfirm eza
+sudo pacman -S --noconfirm starship fzf ripgrep bat zoxide bpytop fd
+yay -S --noconfirm eza atuin

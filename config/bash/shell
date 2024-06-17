@@ -1,0 +1,24 @@
+# Set complete path
+if [ -f /etc/arch-release ]; then
+  export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/mclovin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+fi
+
+set +h
+
+export MCLOVIN_PATH="/home/$USER/.local/share/mclovin"
+
+# Set title
+function set_title() {
+  local CMD=$(history 1 | sed 's/^[ ]*[0-9]*[ ]*//')
+  local PATH=$(pwd)
+
+  if [[ "$PATH" == "$HOME"* ]]; then
+    PATH="~${PATH#$HOME}"
+  fi
+
+  echo -ne "\033]0;${CMD} | ${PATH}\007"
+}
+
+PROMPT_COMMAND='set_title'
+trap 'set_title' DEBUG
+
