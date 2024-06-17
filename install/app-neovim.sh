@@ -1,5 +1,5 @@
 # Define the Neovim version to download
-NVIM_VERSION="stable" # Change to specific version if needed
+NVIM_VERSION="v0.10.0" # Change to specific version if needed
 
 # Install Neovim
 cd /tmp

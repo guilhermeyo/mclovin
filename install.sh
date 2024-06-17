@@ -15,14 +15,14 @@ source $HOME/.local/share/mclovin/install/yay.sh
 source $HOME/.local/share/mclovin/install/mise.sh
 source $HOME/.local/share/mclovin/install/apps-terminal.sh
 source $HOME/.local/share/mclovin/install/bash-preexec.sh
-source $HOME/.local/share/mclovin/install/a-shell.sh
-source $HOME/.local/share/mclovin/install/app-allacrity.sh
-source $HOME/.local/share/mclovin/install/app-lazydocker.sh
-source $HOME/.local/share/mclovin/install/app-lazygit.sh
+source $HOME/.local/share/mclovin/install/fonts.sh
+source $HOME/.local/share/mclovin/install/a-shell.s
+source $HOME/.local/share/mclovin/install/general-packages.sh
+source $HOME/.local/share/mclovin/install/hyprland-packages.sh
+source $HOME/.local/share/mclovin/install/app-alacritty.sh
 source $HOME/.local/share/mclovin/install/app-neovim.sh
 source $HOME/.local/share/mclovin/install/app-vlc.sh
 source $HOME/.local/share/mclovin/install/docker.sh
-source $HOME/.local/share/mclovin/install/fonts.sh
 source $HOME/.local/share/mclovin/install/fastfetch.sh
 
 # Install languages
