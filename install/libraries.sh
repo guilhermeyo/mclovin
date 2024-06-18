@@ -1,5 +1,5 @@
-sudo pacman -Syu --noconfirm \
-  base-devel pkgconf autoconf bison rust cargo clang \
+sudo pacman -S --noconfirm --ask 4 \
+  pkgconf autoconf bison rust cargo clang \
   openssl readline zlib libyaml ncurses libffi gdbm jemalloc \
   libvips imagemagick mupdf mupdf-tools \
   redis sqlite mariadb-libs postgresql-libs

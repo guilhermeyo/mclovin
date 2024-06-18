@@ -12,7 +12,7 @@
   plain = black
   whitespace = red reverse
 [commit]
-	gpgsign = false
+  gpgsign = false
 [alias]
   b = branch
   ca = commit --amend
