@@ -20,9 +20,6 @@ source $HOME/.local/share/mclovin/install/a-shell.s
 source $HOME/.local/share/mclovin/install/set-configs.sh
 source $HOME/.local/share/mclovin/install/docker.sh
 
-# Enable gdm
-sudo systemctl enable gdm.service
-
 # Install languages
 mise use --global rust@latest
 mise use --global python@latest

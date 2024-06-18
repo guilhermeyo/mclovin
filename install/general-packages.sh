@@ -1,5 +1,4 @@
 packagesPacman=(
-  "gnome"
   "i3"
   "dmenu"
   "picom"
