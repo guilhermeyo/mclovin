@@ -1,8 +1,3 @@
-!/bin/bash
-
-# Exit immediately if a command exits with a non-zero status
-set -e
-
 # Needed for all installers
 sudo pacman -Syu --noconfirm
 sudo pacman -Syu --noconfirm base-devel git gnupg sudo wget curl unzip rsync figlet gum

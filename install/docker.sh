@@ -1,8 +1,3 @@
-#!/bin/bash
-
-# Exit immediately if a command exits with a non-zero status
-set -e
-
 # Function to display messages with gum
 gum_message() {
   gum style --foreground 212 --bold --padding "1 1" "$1"

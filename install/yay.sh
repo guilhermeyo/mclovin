@@ -13,7 +13,7 @@ else
   echo $temp_path
   git clone https://aur.archlinux.org/yay-git.git ~/yay-git
   cd ~/yay-git
-  makepkg -si
+  makepkg -si --noconfirm
   cd -
   rm -rf ~/yay-git
   cd $temp_path
