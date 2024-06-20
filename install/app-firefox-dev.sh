@@ -4,3 +4,4 @@ sudo tar xjf Firefox-dev.tar.bz2 -C /opt/
 sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox-dev
 rm Firefox-dev.tar.bz2
 source $MCLOVIN_PATH/applications/Firefox-Dev.sh
+cd -
