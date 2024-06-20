@@ -6,6 +6,9 @@ set -e
 sudo apt update -y
 sudo apt install -y curl wget git unzip
 
+# Fix Sleep
+sudo kernelstub -a "mem_sleep_default=deep"
+
 # Ensure computer doesn't go to sleep or lock while installing
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
