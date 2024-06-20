@@ -1,6 +1,6 @@
 # Needed for all installers
 # Exit immediately if a command exits with a non-zero status
-set -e
+#set -e
 
 # Needed for all installers
 sudo apt update -y
