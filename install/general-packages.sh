@@ -2,7 +2,6 @@ sudo apt install -y \
   i3 \
   dmenu \
   picom \
-  neovim \
   vlc \
   alacritty \
   fzf \
