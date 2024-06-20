@@ -1,4 +1,11 @@
-sudo apt install -y meson ninja-build cmake libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-shape0-dev libxcb-sync-dev libxcb-xfixes0-dev libxcb-xinerama0-dev libxcomposite-dev libx11-xcb-dev libxrandr-dev libx11-dev libev-dev uthash-dev libconfig-dev libdrm-dev git
+sudo apt install -y libconfig-dev libdbus-1-dev \
+  libegl-dev libev-dev libgl-dev libepoxy-dev libpcre2-dev \
+  libpixman-1-dev libx11-xcb-dev libxcb1-dev libxcb-composite0-dev \
+  libxcb-damage0-dev libxcb-glx0-dev libxcb-image0-dev \
+  libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev \
+  libxcb-render-util0-dev libxcb-shape0-dev libxcb-util-dev \
+  libxcb-xfixes0-dev meson ninja-build uthash-dev
+
 git clone https://github.com/yshui/picom.git /tmp/picom
 cd /tmp/picom
 meson --buildtype=release . build
