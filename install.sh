@@ -29,6 +29,7 @@ source $HOME/.local/share/mclovin/install/mise.sh
 source $HOME/.local/share/mclovin/install/a-shell.s
 source $HOME/.local/share/mclovin/install/set-configs.sh
 source $HOME/.local/share/mclovin/install/flatpak.sh
+source $HOME/.local/share/mclovin/install/app-sublime-text.sh
 source $HOME/.local/share/mclovin/install/app-firefox-dev.sh
 source $HOME/.local/share/mclovin/install/app-zoom.sh
 source $HOME/.local/share/mclovin/install/app-spotify.sh
