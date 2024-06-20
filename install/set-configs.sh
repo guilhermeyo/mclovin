@@ -34,6 +34,7 @@ _installSymLink starship ~/.config/starship.toml ~/.local/share/mclovin/config/s
 _installSymLink gitignore ~/.gitignore ~/.local/share/mclovin/config/git/gitignore ~/.gitignore
 _installSymLink gitattributes ~/.gitattributes ~/.local/share/mclovin/config/git/gitattributes ~/.gitattributes
 _installSymLink gitconfig ~/.gitconfig ~/.local/share/mclovin/config/git/gitconfig ~/.gitconfig
+_installSymLink Typora ~/.config/Typora ~/.local/share/mclovin/config/Typora ~/.config
 
 # Widow Switcher - https://github.com/davatorium/rofi
 _installSymLink rofi ~/.config/rofi ~/.local/share/mclovin/config/rofi/ ~/.config

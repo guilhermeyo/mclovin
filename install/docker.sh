@@ -1,35 +1,15 @@
-# Function to display messages with gum
-gum_message() {
-  gum style --foreground 212 --bold --padding "1 1" "$1"
-}
+# Add the official Docker repo
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo wget -qO /etc/apt/keyrings/docker.asc https://download.docker.com/linux/ubuntu/gpg
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
+sudo apt update
 
-# Update the package list and install Docker
-gum_message "Updating package list and installing Docker..."
-sudo pacman -Syu --noconfirm docker
-
-# Enable and start the Docker service
-gum_message "Enabling and starting the Docker service..."
-sudo systemctl enable docker
-sudo systemctl start docker
+# Install Docker engine and standard plugins
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
 
 # Give this user privileged Docker access
-gum_message "Adding the current user to the Docker group..."
 sudo usermod -aG docker ${USER}
 
-# Create Docker daemon configuration directory if it doesn't exist
-sudo mkdir -p /etc/docker
-
 # Use local logging driver - it's more efficient and uses compression by default.
-gum_message "Configuring Docker to use the local logging driver..."
 echo '{"log-driver":"local","log-opts":{"max-size":"10m","max-file":"5"}}' | sudo tee /etc/docker/daemon.json >/dev/null
-
-# Restart Docker to apply the new configuration
-gum_message "Restarting Docker to apply the new configuration..."
-sudo systemctl restart docker
-
-# Print success message
-gum_message "Docker installation and configuration completed successfully."
-gum_message "You need to log out and log back in for the group changes to take effect."
-
-# Optionally, you can add this at the end to automatically restart the shell
-# exec su -l $USER

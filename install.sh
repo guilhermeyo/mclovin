@@ -1,22 +1,41 @@
 # Needed for all installers
-sudo pacman -Syu --noconfirm
-sudo pacman -Syu --noconfirm base-devel git gnupg sudo wget curl unzip rsync figlet gum
+# Exit immediately if a command exits with a non-zero status
+set -e
 
-# Create directory for keyrings if it doesn't exist
-sudo install -dm 755 /etc/pacman.d/gnupg
+# Needed for all installers
+sudo apt update -y
+sudo apt install -y curl wget git unzip
+
+# Ensure computer doesn't go to sleep or lock while installing
+gsettings set org.gnome.desktop.screensaver lock-enabled false
+gsettings set org.gnome.desktop.session idle-delay 0
 
 # Run installers
 source $HOME/.local/share/mclovin/install/libraries.sh
-source $HOME/.local/share/mclovin/install/yay.sh
 source $HOME/.local/share/mclovin/install/general-packages.sh
-source $HOME/.local/share/mclovin/install/mise.sh
+source $HOME/.local/share/mclovin/install/gum.sh
+source $HOME/.local/share/mclovin/install/app-fastfetch.sh
+source $HOME/.local/share/mclovin/install/app-neovim.sh
+source $HOME/.local/share/mclovin/install/app-typora.sh
+source $HOME/.local/share/mclovin/install/app-localsend.sh
+source $HOME/.local/share/mclovin/install/app-atuin.sh
+source $HOME/.local/share/mclovin/install/app-lazygit.sh
+source $HOME/.local/share/mclovin/install/docker.sh
+source $HOME/.local/share/mclovin/install/app-lazydocker.sh
 source $HOME/.local/share/mclovin/install/bash-preexec.sh
+source $HOME/.local/share/mclovin/install/fonts.sh
+source $HOME/.local/share/mclovin/install/mise.sh
 source $HOME/.local/share/mclovin/install/a-shell.s
 source $HOME/.local/share/mclovin/install/set-configs.sh
-source $HOME/.local/share/mclovin/install/docker.sh
+source $HOME/.local/share/mclovin/install/flatpak.sh
+source $HOME/.local/share/mclovin/install/app-firefox-dev.sh
+source $HOME/.local/share/mclovin/install/app-zoom.sh
+source $HOME/.local/share/mclovin/install/app-spotify.sh
+source $HOME/.local/share/mclovin/install/app-virtualbox.sh
 
-# Enable gdm
-sudo systemctl enable gdm.service
+# Revert to normal idle and lock settings
+gsettings set org.gnome.desktop.screensaver lock-enabled true
+gsettings set org.gnome.desktop.session idle-delay 300
 
 # Install languages
 mise use --global rust@latest
@@ -24,7 +43,6 @@ mise use --global python@latest
 mise use --global ruby@3.3.4
 mise use --global node@lts
 
-# Upgrade everything that might ask for a reboot last
-sudo pacman -Syu --noconfirm
-
-sudo systemctl start gdm.service
+# Install databases
+sudo docker run -d --restart unless-stopped -p "127.0.0.1:6379:6379" --name=redis redis:7
+sudo docker run -d --restart unless-stopped -p "127.0.0.1:5432:5432" --name=postgres16 -e POSTGRES_HOST_AUTH_METHOD=trust postgres:16

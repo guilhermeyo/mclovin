@@ -25,7 +25,7 @@
       },
       {
           "type": "packages",
-          "format": "{} (pacman)",
+          "format": "{} (apt)",
           "key": " ├ 󰏖 ",
           "keyColor": "31",
       },

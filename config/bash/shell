@@ -1,5 +1,5 @@
 # Set complete path
-if [ -f /etc/arch-release ]; then
+if grep -q 'ID=pop' /etc/os-release; then
   export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/mclovin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 fi
 
