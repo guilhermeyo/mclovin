@@ -14,6 +14,7 @@ gsettings set org.gnome.desktop.session idle-delay 0
 source $HOME/.local/share/mclovin/install/libraries.sh
 source $HOME/.local/share/mclovin/install/general-packages.sh
 source $HOME/.local/share/mclovin/install/gum.sh
+source $HOME/.local/share/mclovin/install/starship.sh
 source $HOME/.local/share/mclovin/install/app-fastfetch.sh
 source $HOME/.local/share/mclovin/install/app-neovim.sh
 source $HOME/.local/share/mclovin/install/app-typora.sh

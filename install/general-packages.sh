@@ -5,7 +5,6 @@ sudo apt install -y \
   neovim \
   vlc \
   alacritty \
-  starship \
   fzf \
   ripgrep \
   bat \
