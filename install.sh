@@ -17,6 +17,7 @@ gsettings set org.gnome.desktop.session idle-delay 0
 source $HOME/.local/share/mclovin/install/libraries.sh
 source $HOME/.local/share/mclovin/install/general-packages.sh
 source $HOME/.local/share/mclovin/install/gum.sh
+source $HOME/.local/share/mclovin/install/eza.sh
 source $HOME/.local/share/mclovin/install/starship.sh
 source $HOME/.local/share/mclovin/install/app-fastfetch.sh
 source $HOME/.local/share/mclovin/install/app-neovim.sh
@@ -29,7 +30,7 @@ source $HOME/.local/share/mclovin/install/app-lazydocker.sh
 source $HOME/.local/share/mclovin/install/bash-preexec.sh
 source $HOME/.local/share/mclovin/install/fonts.sh
 source $HOME/.local/share/mclovin/install/mise.sh
-source $HOME/.local/share/mclovin/install/a-shell.s
+source $HOME/.local/share/mclovin/install/a-shell.sh
 source $HOME/.local/share/mclovin/install/set-configs.sh
 source $HOME/.local/share/mclovin/install/flatpak.sh
 source $HOME/.local/share/mclovin/install/app-sublime-text.sh
@@ -38,16 +39,16 @@ source $HOME/.local/share/mclovin/install/app-zoom.sh
 source $HOME/.local/share/mclovin/install/app-spotify.sh
 source $HOME/.local/share/mclovin/install/app-virtualbox.sh
 
-# Revert to normal idle and lock settings
-gsettings set org.gnome.desktop.screensaver lock-enabled true
-gsettings set org.gnome.desktop.session idle-delay 300
-
 # Install languages
 mise use --global rust@latest
 mise use --global python@latest
-mise use --global ruby@3.3.4
+mise use --global ruby@3.3
 mise use --global node@lts
 
 # Install databases
 sudo docker run -d --restart unless-stopped -p "127.0.0.1:6379:6379" --name=redis redis:7
 sudo docker run -d --restart unless-stopped -p "127.0.0.1:5432:5432" --name=postgres16 -e POSTGRES_HOST_AUTH_METHOD=trust postgres:16
+
+# Revert to normal idle and lock settings
+gsettings set org.gnome.desktop.screensaver lock-enabled true
+gsettings set org.gnome.desktop.session idle-delay 300

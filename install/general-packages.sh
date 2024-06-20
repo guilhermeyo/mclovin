@@ -3,7 +3,6 @@ sudo apt install -y \
   dmenu \
   picom \
   vlc \
-  alacritty \
   fzf \
   ripgrep \
   bat \
