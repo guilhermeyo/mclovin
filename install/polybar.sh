@@ -2,11 +2,11 @@ CURRENT_DIR_TMP=$(pwd)
 
 sudo apt install -y \
   cmake cmake-data libcairo2-dev libxcb1-dev libxcb-util0-dev \
-  libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto \
+  libxcb-randr0-dev libxcb-composite0-dev xcb-proto \
   libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev \
   libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev \
   libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev \
-  libuv-dev \ python3-pip3
+  libuv-dev \ python3 \ python3-pip3 \ python3-xcbgen
 
 if ! command -v sphinx-build &>/dev/null; then
   sudo pip3 install --upgrade --force-reinstall sphinx
