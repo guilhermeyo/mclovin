@@ -1,7 +1,6 @@
 sudo apt install -y \
   i3 \
-  dmenu \
-  picom \
+  feh \
   vlc \
   fzf \
   ripgrep \
