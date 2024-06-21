@@ -18,7 +18,7 @@ sudo apt install -y \
   libxcb-xrm-dev
 
 ROFI_VERSION="1.7.5"
-git clone --tag $ROFI_VERSION --recursive https://github.com/davatorium/rofi.git /tmp/rofi
+git clone --branch $ROFI_VERSION --recursive https://github.com/davatorium/rofi.git /tmp/rofi
 cd /tmp/rofi
 meson setup build
 ninja -C build
