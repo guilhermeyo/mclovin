@@ -1,5 +1,4 @@
 sudo apt install -y \
-  feh \
   vlc \
   fzf \
   ripgrep \
