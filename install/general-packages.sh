@@ -6,6 +6,4 @@ sudo apt install -y \
   zoxide \
   bpytop \
   fd-find \
-  rofi \
-  polybar \
   xournalpp

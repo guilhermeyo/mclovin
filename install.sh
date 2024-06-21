@@ -30,10 +30,14 @@ source $HOME/.local/share/mclovin/install/app-lazydocker.sh
 source $HOME/.local/share/mclovin/install/bash-preexec.sh
 source $HOME/.local/share/mclovin/install/fonts.sh
 source $HOME/.local/share/mclovin/install/mise.sh
-source $HOME/.local/share/mclovin/install/a-shell.sh
 source $HOME/.local/share/mclovin/install/backgrounds.sh
+source $HOME/.local/share/mclovin/install/i3.sh
+source $HOME/.local/share/mclovin/install/picom.sh
+source $HOME/.local/share/mclovin/install/polybar.sh
+source $HOME/.local/share/mclovin/install/rofi.sh
+source $HOME/.local/share/mclovin/install/feh.sh
+source $HOME/.local/share/mclovin/install/a-shell.sh
 source $HOME/.local/share/mclovin/install/set-configs.sh
-source $HOME/.local/share/mclovin/install/flatpak.sh
 source $HOME/.local/share/mclovin/install/app-sublime-text.sh
 source $HOME/.local/share/mclovin/install/app-firefox-dev.sh
 source $HOME/.local/share/mclovin/install/app-zoom.sh

@@ -1,4 +1,5 @@
-sudo apt install -y libx11-dev libimlib2-dev libxinerama-dev libxt-dev
+sudo apt install -y libx11-dev libimlib2-dev \
+  libxinerama-dev libxt-dev libcurl4-openssl-dev
 
 FEH_VERSION="3.10.2"
 git clone https://github.com/derf/feh.git /tmp/feh
