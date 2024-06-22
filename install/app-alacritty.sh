@@ -1,1 +1,1 @@
-sudo snap install alacritty --classic
+cargo install alacritty

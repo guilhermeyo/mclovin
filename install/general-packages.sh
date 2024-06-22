@@ -6,5 +6,4 @@ sudo apt install -y \
   zoxide \
   bpytop \
   fd-find \
-  xournalpp \
-  snapd
+  xournalpp
