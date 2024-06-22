@@ -6,7 +6,7 @@ sudo apt install -y \
   libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev \
   libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev \
   libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev \
-  python3 python3-pip3 python3-xcbgen
+  python3 python3-pip python3-xcbgen
 
 if ! command -v sphinx-build &>/dev/null; then
   sudo pip3 install --upgrade --force-reinstall sphinx
