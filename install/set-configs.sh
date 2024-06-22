@@ -35,7 +35,7 @@ _installSymLink gitignore ~/.gitignore ~/.local/share/mclovin/config/git/gitigno
 _installSymLink gitattributes ~/.gitattributes ~/.local/share/mclovin/config/git/gitattributes ~/.gitattributes
 _installSymLink gitconfig ~/.gitconfig ~/.local/share/mclovin/config/git/gitconfig ~/.gitconfig
 _installSymLink Typora ~/.config/Typora ~/.local/share/mclovin/config/Typora ~/.config
-_installSymlink xresources ~/.Xresources ~/.local/share/mclovin/config/xresources/.Xresources
+_installSymlink xresources ~/.Xresources ~/.local/share/mclovin/config/xresources/.Xresources ~/.Xresources
 
 # Widow Switcher - https://github.com/davatorium/rofi
 _installSymLink rofi ~/.config/rofi ~/.local/share/mclovin/config/rofi/ ~/.config
