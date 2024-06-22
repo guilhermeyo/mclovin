@@ -41,9 +41,9 @@ source $HOME/.local/share/mclovin/install/a-shell.sh
 source $HOME/.local/share/mclovin/install/set-configs.sh
 source $HOME/.local/share/mclovin/install/app-sublime-text.sh
 source $HOME/.local/share/mclovin/install/app-firefox-dev.sh
-source $HOME/.local/share/mclovin/install/app-zoom.sh
-source $HOME/.local/share/mclovin/install/app-spotify.sh
-source $HOME/.local/share/mclovin/install/app-virtualbox.sh
+#source $HOME/.local/share/mclovin/install/app-zoom.sh
+#source $HOME/.local/share/mclovin/install/app-spotify.sh
+#source $HOME/.local/share/mclovin/install/app-virtualbox.sh
 
 # Install languages
 #mise use --global rust@latest
