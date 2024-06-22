@@ -8,9 +8,7 @@ sudo apt install -y \
   libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev \
   python3 python3-pip python3-xcbgen
 
-if ! command -v sphinx-build &>/dev/null; then
-  sudo pip3 install --upgrade --force-reinstall sphinx
-fi
+sudo pip3 install --upgrade --force-reinstall sphinx
 
 POLYBAR_VERSION="3.6.3"
 git clone --branch $POLYBAR_VERSION --recursive https://github.com/polybar/polybar.git /tmp/polybar

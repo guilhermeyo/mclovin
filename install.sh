@@ -46,15 +46,14 @@ source $HOME/.local/share/mclovin/install/app-spotify.sh
 source $HOME/.local/share/mclovin/install/app-virtualbox.sh
 
 # Install languages
-mise use --global rust@latest
-mise use --global python@latest
-mise use --global ruby@3.3
-mise use --global node@lts
+#mise use --global rust@latest
+#mise use --global ruby@3.3
+#mise use --global node@lts
 
 # Install databases
-sudo docker run -d --restart unless-stopped -p "127.0.0.1:6379:6379" --name=redis redis:7
-sudo docker run -d --restart unless-stopped -p "127.0.0.1:5432:5432" --name=postgres16 -e POSTGRES_HOST_AUTH_METHOD=trust postgres:16
+#sudo docker run -d --restart unless-stopped -p "127.0.0.1:6379:6379" --name=redis redis:7
+#sudo docker run -d --restart unless-stopped -p "127.0.0.1:5432:5432" --name=postgres16 -e POSTGRES_HOST_AUTH_METHOD=trust postgres:16
 
 # Revert to normal idle and lock settings
-gsettings set org.gnome.desktop.screensaver lock-enabled true
-gsettings set org.gnome.desktop.session idle-delay 300
+#gsettings set org.gnome.desktop.screensaver lock-enabled true
+#gsettings set org.gnome.desktop.session idle-delay 300
