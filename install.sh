@@ -20,6 +20,7 @@ source $HOME/.local/share/mclovin/install/gum.sh
 source $HOME/.local/share/mclovin/install/eza.sh
 source $HOME/.local/share/mclovin/install/starship.sh
 source $HOME/.local/share/mclovin/install/app-fastfetch.sh
+source $HOME/.local/share/mclovin/install/app-alacritty.sh
 source $HOME/.local/share/mclovin/install/app-neovim.sh
 source $HOME/.local/share/mclovin/install/app-typora.sh
 source $HOME/.local/share/mclovin/install/app-localsend.sh
