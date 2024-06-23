@@ -1,1 +1,1 @@
-wget -qO- https://starship.rs/install.sh | sh
+cargo install starship --locked
