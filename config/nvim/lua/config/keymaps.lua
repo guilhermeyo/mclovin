@@ -7,3 +7,9 @@ vim.keymap.set({ "n", "v" }, "<F2>", ":bnext<CR>")
 vim.keymap.set({ "n", "v" }, "<F3>", ":bp<bar>sp<bar>bn<bar>bd<CR>")
 vim.keymap.set({ "n", "v" }, "<F4>", ":q!<CR>")
 vim.keymap.set({ "n", "v" }, "<F5>", ":Neotree toggle<CR>")
+
+-- DUplicated keymap - Fix it in nvim-tmux-navigator
+vim.keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", {})
+vim.keymap.set("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", {})
+vim.keymap.set("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", {})
+vim.keymap.set("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", {})

@@ -1,30 +1,30 @@
 # Create symbolic links
 _installSymLink() {
-  name="$1"
-  symlink="$2"
-  linksource="$3"
-  linktarget="$4"
+	name="$1"
+	symlink="$2"
+	linksource="$3"
+	linktarget="$4"
 
-  if [ -L "${symlink}" ]; then
-    rm ${symlink}
-    ln -s ${linksource} ${linktarget}
-    echo "- Symlink ${linksource} -> ${linktarget} created."
-  else
-    if [ -d ${symlink} ]; then
-      rm -rf ${symlink}/
-      ln -s ${linksource} ${linktarget}
-      echo "- Symlink for directory ${linksource} -> ${linktarget} created."
-    else
-      if [ -f ${symlink} ]; then
-        rm ${symlink}
-        ln -s ${linksource} ${linktarget}
-        echo "- Symlink to file ${linksource} -> ${linktarget} created."
-      else
-        ln -s ${linksource} ${linktarget}
-        echo "- New symlink ${linksource} -> ${linktarget} created."
-      fi
-    fi
-  fi
+	if [ -L "${symlink}" ]; then
+		rm ${symlink}
+		ln -s ${linksource} ${linktarget}
+		echo "- Symlink ${linksource} -> ${linktarget} created."
+	else
+		if [ -d ${symlink} ]; then
+			rm -rf ${symlink}/
+			ln -s ${linksource} ${linktarget}
+			echo "- Symlink for directory ${linksource} -> ${linktarget} created."
+		else
+			if [ -f ${symlink} ]; then
+				rm ${symlink}
+				ln -s ${linksource} ${linktarget}
+				echo "- Symlink to file ${linksource} -> ${linktarget} created."
+			else
+				ln -s ${linksource} ${linktarget}
+				echo "- New symlink ${linksource} -> ${linktarget} created."
+			fi
+		fi
+	fi
 }
 
 _installSymLink fastfetch ~/.config/fastfetch ~/.local/share/mclovin/config/fastfetch ~/.config
@@ -36,6 +36,7 @@ _installSymLink gitattributes ~/.gitattributes ~/.local/share/mclovin/config/git
 _installSymLink gitconfig ~/.gitconfig ~/.local/share/mclovin/config/git/gitconfig ~/.gitconfig
 _installSymLink Typora ~/.config/Typora ~/.local/share/mclovin/config/Typora ~/.config
 _installSymLink Xresources ~/.Xresources ~/.local/share/mclovin/config/Xresources ~/.Xresources
+_installSymLink tmux ~/.tmux.conf ~/.local/share/mclovin/config/tmux.conf ~/.tmux.conf
 
 # Widow Switcher - https://github.com/davatorium/rofi
 _installSymLink rofi ~/.config/rofi ~/.local/share/mclovin/config/rofi/ ~/.config
