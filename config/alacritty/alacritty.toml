@@ -11,6 +11,13 @@ TERM = "xterm-256color"
 style = "Beam"
 vi_mode_style = "Block"
 
+[keyboard]
+bindings = [
+  { key = "C", mods = "Control", action = "Copy" },
+  { key = "C", mods = "Control|Shift", chars = "\u0003" },
+  { key = "V", mods = "Control", action = "Paste" },
+]
+
 [window]
 startup_mode = "Maximized"
 dynamic_title = true
@@ -27,18 +34,18 @@ multiplier = 3
 size = 14.0
 
 [font.bold]
-family = "MesloLGS Nerd Font Mono"
+family = "BerkeleyMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "MesloLGS Nerd Font Mono"
+family = "BerkeleyMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "MesloLGS Nerd Font Mono"
+family = "BerkeleyMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "MesloLGS Nerd Font Mono"
+family = "BerkeleyMono Nerd Font"
 style = "Regular"
 

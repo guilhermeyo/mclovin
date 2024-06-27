@@ -14,6 +14,8 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod4
 # set $mod Mod1
 
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --replace --components=ssh
 exec --no-startup-id picom
 exec_always --no-startup-id ~/.local/share/mclovin/bin/mclovim-changebg
 exec --no-startup-id xrdb -merge ~/.Xresources
@@ -23,14 +25,16 @@ exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
-bindsym Print exec maim "/home/$USER/Pictures/$(date).jpg"
-bindsym $mod+Print exec maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).jpg"
-bindsym Shift+Print exec maim --select "/home/$USER/Pictures/$(date).jpg"
+# Screenshots JPG
+bindsym Print exec flameshot gui -c -p "/home/$USER/Pictures/$(date).jpg"
+bindsym $mod+Print exec flameshot full -c -p "/home/$USER/Pictures/$(date).jpg"
 
-## Clipboard Screenshots
-bindsym Ctrl+Print exec maim | xclip -selection clipboard -t image/png
-bindsym Ctrl+$mod+Print exec maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec maim --select | xclip -selection clipboard -t image/png
+# Screenshots PNG
+bindsym Ctrl+Print exec flameshot gui -c -p "/home/$USER/Pictures/$(date)"
+bindsym Ctrl+$mod+Print exec flameshot full -c -p "/home/$USER/Pictures/$(date)"
+
+# Toggle mute unmute microphone
+bindsym $mod+m exec ~/.config/polybar/toggle_mic.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -162,6 +166,9 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Lock and Suspend
+bindsym $mod+Shift+s exec i3lock && systemctl suspend
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

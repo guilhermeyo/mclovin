@@ -14,3 +14,7 @@ if command -v zoxide &> /dev/null; then
   eval "$(zoxide init bash)"
 fi
 
+if command -v tmuxifier &> /dev/null; then
+  eval "$(tmuxifier init -)"
+fi
+

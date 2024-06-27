@@ -7,4 +7,6 @@ sudo apt install -y \
 	bpytop \
 	fd-find \
 	xournalpp \
-	lm-sensors
+	lm-sensors \
+	keychain \
+	flameshot

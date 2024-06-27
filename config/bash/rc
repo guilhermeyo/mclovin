@@ -1,4 +1,5 @@
 source ~/.local/share/mclovin/config/bash/shell
+source ~/.local/share/mclovin/config/bash/ssh_agent
 source ~/.local/share/mclovin/config/bash/init
 source ~/.local/share/mclovin/config/bash/aliases
 

@@ -9,6 +9,7 @@ if true then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
+  { "nvim-tree/nvim-web-devicons", lazy = true },
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
