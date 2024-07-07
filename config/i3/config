@@ -14,11 +14,13 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod4
 # set $mod Mod1
 
+#exec --no-startup-id xrandr --output HDMI-0 --dpi 192 --scale 2x2 --primary --output DVI-D-0 --dpi 96 --auto --right-of HDMI-0
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --replace --components=ssh
+exec_always --no-startup-id xrdb -merge ~/.Xresources
+
 exec --no-startup-id picom
 exec_always --no-startup-id ~/.local/share/mclovin/bin/mclovim-changebg
-exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
 # kill any hanging polybar processes
@@ -168,7 +170,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Lock and Suspend
-bindsym $mod+Shift+s exec i3lock && systemctl suspend
+bindsym $mod+Shift+s exec sudo pm-suspend && i3lock -i ~/backgrounds/nice-blue-background.png
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
