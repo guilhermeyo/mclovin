@@ -67,7 +67,7 @@ foreground = ${colors.foreground}
 
 bottom = true
 
-line-size = 5pt
+line-size = 6pt
 
 #border-size = 4pt
 border-color = #00000000
@@ -80,7 +80,7 @@ module-margin = 1
 separator = |
 separator-foreground = ${colors.flamingo}
 
-font-0 = MesloLGS Nerd Font Mono:size=20;6
+font-0 = MesloLGS Nerd Font Mono:size=22;8
 
 modules-left = xworkspaces xwindow
 modules-right = mic pulseaudio memory cpu temps wlan battery date
@@ -187,9 +187,9 @@ label = %percentage:2%%
 
 [module/temps]
 type = custom/script
-exec = ~/.config/polybar/cpu_temp.sh
+exec = ~/.config/polybar/temps.sh
 interval = 2
-label = "%output%"
+label = "%output%ºC"
 
 [module/battery]
 type = internal/battery
@@ -248,4 +248,3 @@ screenchange-reload = true
 pseudo-transparency = true
 
 ; vim:ft=dosini
-

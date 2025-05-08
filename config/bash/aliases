@@ -12,3 +12,4 @@ alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias ls="eza --colour=always --icons --git --git-repos --header --group-directories-first"
 alias ll="ls -l -o"
 alias scratch="nvim ~/Projects/scratches"
+alias kamal_v1='docker run -it --rm -v "${PWD}:/workdir" -v "${SSH_AUTH_SOCK}:/ssh-agent" -v /var/run/docker.sock:/var/run/docker.sock -e "SSH_AUTH_SOCK=/ssh-agent" ghcr.io/basecamp/kamal:v1.9.2'

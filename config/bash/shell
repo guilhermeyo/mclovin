@@ -1,8 +1,8 @@
 # Set complete path
-if [ -f /etc/os-release ] && grep -q 'ID=pop' /etc/os-release; then
-  export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/mclovin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:$HOME/.cargo/bin:$HOME/.atuin/bin:$HOME/.tmuxifier/bin"
-fi
+export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/mclovin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:$HOME/.cargo/bin:$HOME/.atuin/bin:$HOME/.tmuxifier/bin:$HOME/.docker/cli-plugins:$PATH"
 
 set +h
 
 export MCLOVIN_PATH="/home/$USER/.local/share/mclovin"
+export WEBDRIVER_CHROME_BINARY=/usr/bin/brave
+

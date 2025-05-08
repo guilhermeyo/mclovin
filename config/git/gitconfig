@@ -12,7 +12,7 @@
   plain = black
   whitespace = red reverse
 [commit]
-  gpgsign = false
+  gpgsign = true
 [alias]
   b = branch
   ca = commit --amend
@@ -51,3 +51,4 @@
 [user]
   name = Guilherme Yamakawa de Oliveira
   email = github@guilherme44.com
+  signingkey = ~/.ssh/id_rsa.pub
