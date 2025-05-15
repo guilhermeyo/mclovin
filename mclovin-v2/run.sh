@@ -43,7 +43,7 @@ else
 fi
 
 # Install Gnome
-. gnome/install-gnome.sh
+. install-gnome.sh
 
 # Install all packages
 echo "Installing system utilities..."
