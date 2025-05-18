@@ -11,6 +11,7 @@ packages=(
   tmux
   ghostty
   git
+  less
   mise
   bash-preexec
   docker

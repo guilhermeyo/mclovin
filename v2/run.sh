@@ -38,7 +38,7 @@ echo "Updating system..."
 sudo pacman -Syu --noconfirm
 
 # Install yay AUR helper if not present
-./install/yay.sh
+./install/00-yay.sh
 
 # Install all mandatory packages
 . install/01-system-utils.sh
