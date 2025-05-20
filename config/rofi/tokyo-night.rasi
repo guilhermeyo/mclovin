@@ -1,19 +1,19 @@
 * {
-  bg-col:  #1e1e2e;
-  bg-col-light: #1e1e2e;
-  border-col: #1e1e2e;
-  selected-col: #1e1e2e;
-  blue: #89b4fa;
-  fg-col: #cdd6f4;
-  fg-col2: #f38ba8;
-  grey: #6c7086;
-  width: 1800;
-  font: "JetBrainsMono Nerd Font 26";
+  bg-col: #24283b;             /* Fundo principal do Tokyo Night */
+  bg-col-light: #24283b;       /* Mantém consistente com o tema Tokyo Night */
+  border-col: #c5c8c6;         /* Cor de borda do Tokyo Night */
+  selected-col: #9274ca;       /* Cor de seleção (hv do Tokyo Night) */
+  blue: #7aa2f7;               /* Cor kl do Tokyo Night */
+  fg-col: #c5c8c6;             /* Cor de texto primária */
+  fg-col2: #7aa2f7;            /* Texto selecionado usando a cor kl */
+  grey: #565f89;               /* Tom de cinza do Tokyo Night */
+  width: 1800;                 /* Mantém o tamanho original */
+  font: "JetBrainsMono Nerd Font 26";  /* Mantém a fonte original */
 }
 
-element-text, element-icon , mode-switcher {
+element-text, element-icon, mode-switcher {
   background-color: inherit;
-  text-color:       inherit;
+  text-color: inherit;
 }
 
 window {
@@ -66,7 +66,7 @@ listview {
 element {
   padding: 5px;
   background-color: @bg-col;
-  text-color: @fg-col  ;
+  text-color: @blue;  /* Usando a cor kl (#7aa2f7) para elementos */
 }
 
 element-icon {
@@ -74,8 +74,8 @@ element-icon {
 }
 
 element selected {
-  background-color:  @selected-col ;
-  text-color: @fg-col2  ;
+  background-color: @selected-col;  /* Cor de seleção (#9274ca) */
+  text-color: #000000;  /* Texto preto para elementos selecionados conforme o tema de referência */
 }
 
 mode-switcher {
@@ -91,8 +91,8 @@ button {
 }
 
 button selected {
-background-color: @bg-col;
-text-color: @blue;
+  background-color: @bg-col;
+  text-color: @blue;
 }
 
 message {

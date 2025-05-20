@@ -1,0 +1,110 @@
+* {
+  bg-col: #24283b;             /* Fundo principal do Tokyo Night */
+  bg-col-light: #24283b;       /* Mantém consistente com o tema Tokyo Night */
+  border-col: #c5c8c6;         /* Cor de borda do Tokyo Night */
+  selected-col: #9274ca;       /* Cor de seleção (hv do Tokyo Night) */
+  blue: #7aa2f7;               /* Cor kl do Tokyo Night */
+  fg-col: #c5c8c6;             /* Cor de texto primária */
+  fg-col2: #7aa2f7;            /* Texto selecionado usando a cor kl */
+  grey: #565f89;               /* Tom de cinza do Tokyo Night */
+  width: 1800;                 /* Mantém o tamanho original */
+  font: "JetBrainsMono Nerd Font 26";  /* Mantém a fonte original */
+}
+
+element-text, element-icon, mode-switcher {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+window {
+  height: 800px;
+  border: 3px;
+  border-color: @border-col;
+  background-color: @bg-col;
+}
+
+mainbox {
+  background-color: @bg-col;
+}
+
+inputbar {
+  children: [prompt,entry];
+  background-color: @bg-col;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+prompt {
+  background-color: @blue;
+  padding: 6px;
+  text-color: @bg-col;
+  border-radius: 3px;
+  margin: 20px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+}
+
+entry {
+  padding: 6px;
+  margin: 20px 0px 0px 10px;
+  text-color: @fg-col;
+  background-color: @bg-col;
+}
+
+listview {
+  border: 0px 0px 0px;
+  padding: 6px 0px 0px;
+  margin: 10px 0px 0px 20px;
+  columns: 2;
+  lines: 5;
+  background-color: @bg-col;
+}
+
+element {
+  padding: 5px;
+  background-color: @bg-col;
+  text-color: @blue;  /* Usando a cor kl (#7aa2f7) para elementos */
+}
+
+element-icon {
+  size: 25px;
+}
+
+element selected {
+  background-color: @selected-col;  /* Cor de seleção (#9274ca) */
+  text-color: #000000;  /* Texto preto para elementos selecionados conforme o tema de referência */
+}
+
+mode-switcher {
+  spacing: 0;
+}
+
+button {
+  padding: 10px;
+  background-color: @bg-col-light;
+  text-color: @grey;
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @bg-col;
+  text-color: @blue;
+}
+
+message {
+  background-color: @bg-col-light;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+textbox {
+  padding: 6px;
+  margin: 20px 0px 0px 20px;
+  text-color: @blue;
+  background-color: @bg-col-light;
+}

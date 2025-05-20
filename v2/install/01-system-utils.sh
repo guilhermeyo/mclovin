@@ -20,6 +20,7 @@ packages=(
   feh
   flameshot
   brave-bin
+  alsa-utils
 )
 
 eecho "System utilities - Starting installation..."
