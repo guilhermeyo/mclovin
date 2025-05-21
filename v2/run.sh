@@ -51,6 +51,10 @@ sudo pacman -Syu --noconfirm
 # Enable services
 . enable-services.sh
 
+# Install tmux powers
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+
 # Process the selected options
 if echo "$CHOICES" | grep -q "Flatpak Apps"; then
   gum style --foreground 82 "Installing Flatpak Apps (Spotify, Chrome)..."

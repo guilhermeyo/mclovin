@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# Garante que estamos usando o modo de suspensão profundo (deep sleep)
-echo deep | sudo tee /sys/power/mem_sleep
-
-# Bloqueia a tela antes de suspender
+# Lock the screen
 i3lock -i ~/backgrounds/nice-blue-background.png
 
-# Pequena pausa para garantir o lock
-sleep 1
+# Save session (Optional, if you want to save your session state)
+# i3-save-session
 
-# Suspende o sistema
+# Put the system to sleep
 systemctl suspend

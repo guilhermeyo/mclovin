@@ -12,12 +12,17 @@ mkdir -p "$DOTFILES_DIR"
 cp -rn "$DEFAULTS_DIR/"* "$DOTFILES_DIR/"
 cd "$DOTFILES_DIR"
 
+# Aplicando todos os dotfiles com stow
 stow autostart
-stow starship
 stow bashrc
+stow fastfetch
 stow i3
+stow inputrc
+stow kitty
 stow picom
 stow polybar
 stow rofi
+stow starship
+stow tmux
 
 echo "[ok] Dotfiles aplicados com stow."
