@@ -9,7 +9,7 @@ packages=(
   neovim
   starship
   tmux
-  ghostty
+  kitty
   git
   less
   mise

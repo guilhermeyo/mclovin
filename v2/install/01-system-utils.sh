@@ -21,7 +21,6 @@ packages=(
   flameshot
   brave-bin
   alsa-utils
-  tmux
 )
 
 eecho "System utilities - Starting installation..."
