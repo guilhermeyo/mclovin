@@ -10,20 +10,18 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 for_window [class="^.*"] border pixel 1
-for_window [class="obs"] floating enable
 
 set $mod Mod4
+exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
+# Start Gnome Keyring for SSH Keys
 exec --no-startup-id ~/.config/autostart/gnome-keyring-start.sh
-exec_always --no-startup-id xrdb -merge ~/.Xresources
 
 exec_always --no-startup-id "pkill picom; picom --config ~/.config/picom/picom.conf"
 exec_always --no-startup-id ~/.local/share/mclovin/bin/changebg
-exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
 # kill any hanging polybar processes
-exec_always --no-startup-id killall polybar
-exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+exec_always --no-startup-id "pkill polybar; polybar --reload toph --config='~/.config/polybar/config.ini' &"
 
 # Screenshots JPG
 bindsym Print exec flameshot gui -c -p "/home/$USER/Pictures/$(date).jpg"
