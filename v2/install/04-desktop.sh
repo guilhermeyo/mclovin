@@ -3,7 +3,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="$(dirname "$SCRIPT_DIR")"
 
-source "$SCRIPT_DIR/utils.sh"
+source "$BASE_DIR/utils.sh"
 
 packages=(
   gnome
