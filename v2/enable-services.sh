@@ -1,5 +1,10 @@
 #!/bin/bash
 
+services=(
+  lightdm.service
+  NetworkManager.service
+)
+
 echo "Configuring services..."
 for service in "${services[@]}"; do
   if ! systemctl is-enabled "$service" &>/dev/null; then

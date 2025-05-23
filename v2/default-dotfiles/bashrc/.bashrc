@@ -1,3 +1,6 @@
+# Active bash-preexec from AUR
+[[ -f /usr/share/bash-preexec/bash-preexec.sh ]] && source /usr/share/bash-preexec/bash-preexec.sh
+
 eval "$(mise activate bash)"
 eval "$(starship init bash)"
 eval "$(atuin init bash)"
@@ -16,15 +19,15 @@ export EZA_COLORS="di=37:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=3
 export RUBY_CONFIGURE_OPTS=--enable-yjit
 
 # Aliases
-alias c="clear"
+alias f='printf "\033[6 q"'
+alias c="clear && f"
 alias nf="fastfetch"
 alias pf="fastfetch"
 alias hex="openssl rand -hex"
 alias path='echo $PATH | tr : "\n" | uniq'
-alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
+alias pubkey="xclip -selection clipboard < ~/.ssh/id_rsa.pub && printf '=> Public key copied to clipboard.\n'"
 alias grep="grep --color=auto"
 alias cd="z"
-alias bat="batcat"
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias ls="eza --colour=always --icons --git --git-repos --header --group-directories-first"
 alias ll="ls -l -o"
@@ -33,3 +36,5 @@ alias ll="ls -l -o"
 if [ -e /run/user/$(id -u)/gcr/ssh ]; then
   export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 fi
+
+trap 'printf "\033[6 q"' DEBUG

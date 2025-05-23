@@ -9,3 +9,5 @@ export EZA_COLORS="di=37:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=3
 # Enable YJIT
 export RUBY_CONFIGURE_OPTS=--enable-yjit
 
+alias pubkey="xclip -selection clipboard < ~/.ssh/id_rsa.pub && printf '=> Public key copied to clipboard.\n'"
+

@@ -24,5 +24,6 @@ stow polybar
 stow rofi
 stow starship
 stow tmux
+stow lightdm
 
 echo "[ok] Dotfiles aplicados com stow."

@@ -70,9 +70,11 @@ else
   gum style --foreground 196 "Skipping VirtualBox installation."
 fi
 
+. install/09-default-wallpapers.sh
+
 if echo "$CHOICES" | grep -q "Gnome Specific"; then
   gum style --foreground 82 "Installing Gnome Specific configurations for TWM..."
-  . install/09-gnome-specifics-twm.sh
+  . install/10-gnome-specifics-twm.sh
 else
   gum style --foreground 196 "Skipping Gnome Specific configurations."
 fi

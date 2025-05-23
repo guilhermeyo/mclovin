@@ -9,6 +9,8 @@ packages=(
   picom
   polybar
   rofi
+  lightdm
+  lightdm-slick-greeter
 )
 
 echo "Desktop environment - Starting installation..."
