@@ -4,43 +4,43 @@ DOTFILES_DIR="$HOME/dotfiles"
 DEFAULTS_DIR="$(pwd)/../default-dotfiles"
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 
-# Check if stow is installed
-if ! pacman -Qi stow &>/dev/null; then
-  echo "[!] Please install 'stow' before continuing: sudo pacman -S stow"
+# Check for stow
+if ! command -v stow &>/dev/null; then
+  echo "[!] Please install 'stow': sudo pacman -S stow"
   exit 1
 fi
 
-# Create dotfiles directory and copy defaults if needed
+# Setup dotfiles directory
 mkdir -p "$DOTFILES_DIR"
 cp -rn "$DEFAULTS_DIR/"* "$DOTFILES_DIR/"
 cd "$DOTFILES_DIR" || exit 1
 
-# Function to handle existing conflicts
-handle_conflicts() {
-  local package=$1
-  echo "[*] Checking for conflicts in: $package"
-
-  # Use stow in dry-run + verbose mode to detect conflicts
-  for target in $(stow -nv "$package" | grep -Po '(?<=\s)\~?/.+'); do
-    resolved_path="${target/#\~/$HOME}"
-    if [ -e "$resolved_path" ] || [ -L "$resolved_path" ]; then
-      backup_path="${resolved_path}-from-${TIMESTAMP}"
-      echo "[!] Conflict detected: $resolved_path already exists. Moving it to $backup_path"
-      mv "$resolved_path" "$backup_path"
-    fi
-  done
-}
-
-# List of dotfiles packages
-DOTFILES=(
+# List of dotfile packages
+PACKAGES=(
   autostart bashrc fastfetch i3 inputrc kitty picom polybar
   rofi starship tmux lightdm
 )
 
-# Apply each dotfile package
-for pkg in "${DOTFILES[@]}"; do
+# Function to rename conflicting targets
+handle_conflicts() {
+  local pkg=$1
+  echo "[*] Checking and resolving conflicts for: $pkg"
+
+  # Use stow dry-run to detect what paths it would touch
+  stow -nv "$pkg" 2>/dev/null | grep '->' | awk '{print $3}' | while read -r target; do
+    resolved="$HOME/$target"
+    if [ -e "$resolved" ] || [ -L "$resolved" ]; then
+      new_name="${resolved}-old-${TIMESTAMP}"
+      echo "[!] Renaming conflict: $resolved → $new_name"
+      mv "$resolved" "$new_name"
+    fi
+  done
+}
+
+# Process each package
+for pkg in "${PACKAGES[@]}"; do
   handle_conflicts "$pkg"
   stow "$pkg"
 done
 
-echo "[✔] Dotfiles successfully applied using stow."
+echo "[✔] Dotfiles applied. Conflicts renamed with '-old-$TIMESTAMP'."
