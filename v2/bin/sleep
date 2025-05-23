@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Lock the screen
+i3lock -i ~/Pictures/wallpapers/nice-blue-background.png
+
+# Save session (Optional, if you want to save your session state)
+# i3-save-session
+
+# Put the system to sleep
+systemctl suspend

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOTFILES_DIR="$HOME/dotfiles"
-DEFAULTS_DIR="$(pwd)/default-dotfiles"
+DEFAULTS_DIR="$(pwd)/../default-dotfiles"
 
 if ! pacman -Qi stow &>/dev/null; then
   echo "[!] Instale o stow antes de continuar: sudo pacman -S stow"

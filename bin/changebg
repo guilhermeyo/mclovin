@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BACKGROUND_DIR=~/backgrounds
-LOG_FILE=~/.mclovin-last-background.log
+BACKGROUND_DIR=~/Pictures/wallpapers
+LOG_FILE=~/Pictures/wallpapers/.mclovin-last-background.log
 
 choose_new_wallpaper() {
   local wallpapers=("$BACKGROUND_DIR"/*)
@@ -26,5 +26,4 @@ choose_new_wallpaper() {
 new_wallpaper=$(choose_new_wallpaper)
 feh --bg-scale "$new_wallpaper"
 
-# Salva o novo wallpaper no arquivo de log
 echo "$new_wallpaper" >"$LOG_FILE"
