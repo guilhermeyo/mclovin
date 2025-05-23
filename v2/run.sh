@@ -51,10 +51,6 @@ sudo pacman -Syu --noconfirm
 # Enable services
 . enable-services.sh
 
-# Install tmux powers
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
-
 # Process the selected options
 if echo "$CHOICES" | grep -q "Flatpak Apps"; then
   gum style --foreground 82 "Installing Flatpak Apps (Spotify, Chrome)..."
@@ -78,6 +74,8 @@ if echo "$CHOICES" | grep -q "Gnome Specific"; then
 else
   gum style --foreground 196 "Skipping Gnome Specific configurations."
 fi
+
+. install/11-default-dotfiles.sh
 
 # Show completion message with a spinner
 gum style --border double --margin "1" --padding "1" --border-foreground 82 "Setup complete! You may want to reboot your system."

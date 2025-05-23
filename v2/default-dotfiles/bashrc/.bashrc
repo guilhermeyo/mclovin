@@ -5,7 +5,6 @@ eval "$(mise activate bash)"
 eval "$(starship init bash)"
 eval "$(atuin init bash)"
 eval "$(zoxide init bash)"
-eval "$(tmuxifier init -)"
 
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"

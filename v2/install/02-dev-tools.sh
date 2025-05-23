@@ -1,6 +1,9 @@
 #!/bin/bash
 
-source ../utils.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASE_DIR="$(dirname "$SCRIPT_DIR")"
+
+source "$SCRIPT_DIR/utils.sh"
 
 packages=(
   vim
@@ -21,4 +24,9 @@ packages=(
 
 echo "Development tools - Starting installation..."
 install_packages "${packages[@]}"
+
+# Install tmux powers
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+
 echo "Development tools - Installation completed!"
