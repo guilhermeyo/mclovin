@@ -23,6 +23,6 @@ packages=(
   alsa-utils
 )
 
-eecho "System utilities - Starting installation..."
+echo "System utilities - Starting installation..."
 install_packages "${packages[@]}"
 echo "System utilities - Installation completed!"
