@@ -17,7 +17,7 @@ exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id ~/.config/autostart/gnome-keyring-start.sh
 
 exec_always --no-startup-id "pkill picom; picom --config ~/.config/picom/picom.conf"
-exec_always --no-startup-id "changebg"
+exec_always --no-startup-id ~/.local/share/mclovin/bin/changebg
 
 # kill any hanging polybar processes
 exec_always --no-startup-id "pkill polybar; polybar --reload toph --config='~/.config/polybar/config.ini' &"
