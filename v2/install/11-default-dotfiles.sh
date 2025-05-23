@@ -32,10 +32,15 @@ apply_stow() {
     local timestamp=$(date +%Y%m%d_%H%M%S)
     local backup_name="$(basename "$target_path")_${timestamp}"
     echo -e "${YELLOW}    -> Movendo para $BACKUP_DIR/$backup_name${NC}"
-    mv "$target_path" "$BACKUP_DIR/$backup_name"
+    sudo mv "$target_path" "$BACKUP_DIR/$backup_name"
   fi
 
-  stow "$package"
+  if [ "$package" == "lightdm" ]; then
+    sudo stow -t / "$package"
+  else
+    stow "$package"
+  fi
+
   if [ $? -eq 0 ]; then
     echo -e "${GREEN}    -> $package aplicado com sucesso!${NC}"
   else
@@ -57,7 +62,7 @@ declare -A configs=(
   ["rofi"]="$HOME/.config/rofi"
   ["starship"]="$HOME/.config/starship.toml"
   ["tmux"]="$HOME/.tmux.conf"
-  ["lightdm"]="$HOME/.config/lightdm"
+  ["lightdm"]="/etc/lightdm"
 )
 
 for config in "${!configs[@]}"; do
