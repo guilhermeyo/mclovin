@@ -14,6 +14,8 @@ packages=(
   less
   mise
   bash-preexec
+  atuin
+  zoxide
   docker
 )
 
