@@ -1,18 +1,21 @@
-#!/bin/bash
-echo "LightDM Litarvan 4K - Starting installation..."
+# Enable LightDM service
+
+echo "LightDM Litarvan - Enabling service..."
+sudo systemctl enable lightdm#!/bin/bash
+
+echo "LightDM Litarvan - Starting installation..."
+
 # Install LightDM and Litarvan theme
 sudo pacman -S --needed lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan --noconfirm
 
 # Configure LightDM greeter
-echo "LightDM Litarvan 4K - Configuring greeter..."
+#
+echo "LightDM Litarvan - Configuring greeter..."
 sudo sed -i 's/^#*greeter-session=.*/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 
-# Configure Litarvan theme with HiDPI
-echo "LightDM Litarvan 4K - Setting theme and HiDPI..."
-sudo tee /etc/lightdm/lightdm-webkit2-greeter.conf >/dev/null <<'EOF'
-webkit_theme=litarvan
-enable-hidpi=on
-scaling-factor=2
-EOF
+# Configure Litarvan theme
+echo "LightDM Litarvan - Setting theme..."
+sudo sed -i 's/^#*webkit_theme=.*/webkit_theme=litarvan/' /etc/lightdm/lightdm-webkit2-greeter.conf
 
-echo "LightDM Litarvan 4K - Installation completed!"
+# Enable LightDM service
+echo "LightDM Litarvan - Installation completed!"
