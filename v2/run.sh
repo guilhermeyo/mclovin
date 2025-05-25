@@ -75,7 +75,8 @@ else
   gum style --foreground 196 "Skipping Gnome Specific configurations."
 fi
 
-. install/11-default-dotfiles.sh
+. install/11-lightdm.sh
+. install/12-default-dotfiles.sh
 
 # Show completion message with a spinner
 gum style --border double --margin "1" --padding "1" --border-foreground 82 "Setup complete! You may want to reboot your system."
