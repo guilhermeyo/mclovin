@@ -23,17 +23,8 @@ backup_if_exists() {
 
   if [ -e "$path" ] || [ -L "$path" ]; then
     echo "[backup] $name"
-    if [[ "$path" == /etc/* ]]; then
-      sudo cp -r "$path" "$BACKUP_DIR/$name.backup"
-    else
-      cp -r "$path" "$BACKUP_DIR/$name.backup"
-    fi
-
-    if [[ "$path" == /etc/* ]]; then
-      sudo rm -rf "$path"
-    else
-      rm -rf "$path"
-    fi
+    cp -r "$path" "$BACKUP_DIR/$name.backup"
+    rm -rf "$path"
   fi
 }
 
@@ -50,8 +41,6 @@ backup_if_exists "$HOME/.config/polybar" "polybar"
 backup_if_exists "$HOME/.config/rofi" "rofi"
 backup_if_exists "$HOME/.config/starship.toml" "starship"
 backup_if_exists "$HOME/.tmux.conf" "tmux"
-backup_if_exists "/etc/lightdm/lightdm.conf" "lightdm-conf"
-backup_if_exists "/etc/lightdm/slick-greeter.conf" "slick-greeter-conf"
 
 configs=(
   "Xresources"
@@ -73,9 +62,6 @@ for config in "${configs[@]}"; do
   echo "[*] $config"
   stow "$config"
 done
-
-echo "[*] lightdm (requires sudo)"
-sudo stow lightdm
 
 echo "[ok] Dotfiles applied!"
 echo "[info] Backups saved in: $BACKUP_DIR"
