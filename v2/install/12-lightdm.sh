@@ -23,8 +23,4 @@ EOF
 echo "LightDM Litarvan 4K - Configuring HiDPI..."
 sudo sed -i '/^\[Seat:\*\]/a display-setup-script=xrandr --dpi 192' /etc/lightdm/lightdm.conf
 
-# Enable LightDM service
-echo "LightDM Litarvan 4K - Enabling service..."
-sudo systemctl enable lightdm
 echo "LightDM Litarvan 4K - Installation completed!"
-echo "4K HiDPI support enabled (2x scaling)"
