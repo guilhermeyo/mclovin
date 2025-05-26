@@ -19,6 +19,7 @@ packages=(
   atuin
   zoxide
   docker
+  eza
 )
 
 echo "Development tools - Starting installation..."
