@@ -49,7 +49,7 @@ sudo pacman -Syu --noconfirm
 . install/06-fonts.sh
 
 # Enable network manager service
-sudo sytemctl enable NetworkManager.service
+sudo systemctl enable NetworkManager.service
 
 # Process the selected options
 if echo "$CHOICES" | grep -q "Flatpak Apps"; then
