@@ -61,7 +61,7 @@ fi
 
 if echo "$CHOICES" | grep -q "VirtualBox"; then
   gum style --foreground 82 "Installing VirtualBox..."
-  . install/08-virtual-box.sh
+  . install/08-virtualbox.sh
 else
   gum style --foreground 196 "Skipping VirtualBox installation."
 fi
